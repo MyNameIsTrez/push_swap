@@ -1,0 +1,23 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+	{
+		"name": "push_swap",
+
+		// Prints to the debug console instead of the terminal
+		// Can't see statics in debugger
+		"type": "cppdbg",
+		"MIMode": "lldb",
+
+		// Doesn't support expression-based breakpoints
+		// Casting in watch window will give "invalid syntax"
+		// "type": "lldb",
+
+		"request": "launch",
+		"program": "${workspaceFolder}/push_swap",
+		"args": [],
+		"cwd": "${workspaceFolder}",
+		"preLaunchTask": "Build push_swap",
+		"internalConsoleOptions": "neverOpen"
+	}]
+}
