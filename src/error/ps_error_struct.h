@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ps_error_struct.h                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 17:57:36 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:27:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/08/31 18:16:27 by sbos          #+#    #+#                 */
+/*   Updated: 2022/08/31 18:22:15 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_ERROR_STRUCT_H
+# define PS_ERROR_STRUCT_H
 
-int	main(t_i32 argc, char **argv)
+typedef enum e_ps_error
 {
-	t_data	data;
+	PS_OK,
+	PS_DUPLICATE,
+	PS_ERROR_COUNT,
+}	t_ps_error;
 
-	if (ps_init(argc, argv, &data) != OK)
-	{
-		ps_print_all_errors();
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_SUCCESS);
-}
+#endif

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ps_print_all_errors.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 17:57:36 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:27:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/07/06 14:12:24 by sbos          #+#    #+#                 */
+/*   Updated: 2022/08/31 18:26:50 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(t_i32 argc, char **argv)
-{
-	t_data	data;
+#include "private/ps_private_error.h"
+#include "private/print_all_errors/ps_private_print_all_errors.h"
 
-	if (ps_init(argc, argv, &data) != OK)
-	{
-		ps_print_all_errors();
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_SUCCESS);
+void	ps_print_all_errors(void)
+{
+	if (ft_get_error() != FT_OK)
+		ft_print_error();
+	if (ps_get_error() != PS_OK)
+		ps_print_error();
 }

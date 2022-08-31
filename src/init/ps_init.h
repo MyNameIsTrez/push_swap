@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ps_init.h                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 17:57:36 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:27:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/08/31 18:28:09 by sbos          #+#    #+#                 */
+/*   Updated: 2022/08/31 18:29:26 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_INIT_H
+# define PS_INIT_H
 
-int	main(t_i32 argc, char **argv)
-{
-	t_data	data;
+typedef struct s_data	t_data;
 
-	if (ps_init(argc, argv, &data) != OK)
-	{
-		ps_print_all_errors();
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_SUCCESS);
-}
+t_status	ps_init(t_i32 argc, char **argv, t_data *data);
+
+#endif

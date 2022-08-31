@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ps_private_print_all_errors.h                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 17:57:36 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:27:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/08/05 18:03:33 by sbos          #+#    #+#                 */
+/*   Updated: 2022/08/31 18:18:23 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_PRIVATE_PRINT_ALL_ERRORS_H
+# define PS_PRIVATE_PRINT_ALL_ERRORS_H
 
-int	main(t_i32 argc, char **argv)
-{
-	t_data	data;
+void	ps_print_error(void);
 
-	if (ps_init(argc, argv, &data) != OK)
-	{
-		ps_print_all_errors();
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_SUCCESS);
-}
+#endif
