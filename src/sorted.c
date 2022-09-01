@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_print_error.c                                   :+:    :+:            */
+/*   sorted.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/07/06 13:20:27 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:51:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 17:53:29 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 17:53:29 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include "../ps_private_error.h"
-
-void	ps_print_error(void)
+bool	ps_is_sorted(t_data *data)
 {
-	char*const	ps_error_messages[] = {
-	[PS_E_NOT_INTEGER] = "Non-integer argument.",
-	[PS_E_DUPLICATE] = "Duplicate argument.",
-	};
+	size_t	i;
 
-	ft_putendl_fd("Error", STDERR_FILENO);
-	ft_putendl_fd(ps_error_messages[ps_get_error()], STDERR_FILENO);
+	if (ft_vector_get_size(data->b) > 0)
+		return (false);
+	i = ft_vector_get_size(data->a) - 1;
+	while (i > 0)
+	{
+		if (data->a[i - 1] > data->a[i])
+			return (false);
+		i--;
+	}
+	return (true);
 }

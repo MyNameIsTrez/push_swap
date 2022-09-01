@@ -25,11 +25,14 @@ t_status	normalize(t_data *data)
 		return (ERROR);
 	len = ft_vector_get_size(a2);
 	ft_bubble_sort(a2, len);
+	if (has_duplicate(a2, len))
+		return (ps_set_error(PS_E_DUPLICATE));
 	i = 0;
 	while (i < len)
 	{
 		data->a[i] = find_index(a2, data->a[i]);
 		i++;
 	}
+	ft_vector_free(&a2);
 	return (OK);
 }

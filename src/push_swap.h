@@ -19,4 +19,7 @@
 # include "init/ps_init.h"
 # include "structs/ps_struct_data.h"
 
+void	ps_run(t_data *data);
+bool	ps_is_sorted(t_data *data);
+
 #endif

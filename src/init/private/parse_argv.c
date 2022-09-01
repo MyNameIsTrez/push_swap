@@ -19,16 +19,15 @@ t_status	parse_argv(size_t argc, char **argv, t_data *data)
 	size_t	i;
 	t_i32	n;
 
-	data->a = ft_vector_new(sizeof(t_i32));
+	data->a = ft_vector_new_reserved(sizeof(t_i32), argc - 1);
 	if (data->a == NULL)
 		return (ERROR);
 	i = 1;
 	while (i < argc)
 	{
 		if (!ft_atoi_safe(argv[i], &n))
-			return (ps_set_error(PS_NOT_INTEGER));
-		if (ft_vector_push(&data->a, &n) != OK)
-			return (ERROR);
+			return (ps_set_error(PS_E_NOT_INTEGER));
+		ft_vector_push(&data->a, &n);
 		i++;
 	}
 	return (OK);

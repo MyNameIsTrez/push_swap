@@ -21,5 +21,8 @@ t_status	ps_init(size_t argc, char **argv, t_data *data)
 		return (ERROR);
 	if (normalize(data) != OK)
 		return (ERROR);
+	data->b = ft_vector_new_reserved(sizeof(t_i32), argc - 1);
+	if (data->b == NULL)
+		return (ERROR);
 	return (OK);
 }
