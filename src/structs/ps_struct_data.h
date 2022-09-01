@@ -6,7 +6,7 @@
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/08/31 18:07:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:20:08 by sbos          ########   odam.nl         */
+/*   Updated: 2022/09/01 14:46:46 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 typedef struct s_data
 {
-	int	*a;
+	t_i32	*a;
+	t_i32	*b;
 }	t_data;
 
 #endif

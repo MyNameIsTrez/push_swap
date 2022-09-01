@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_print_error.c                                   :+:    :+:            */
+/*   ps_private_init.h                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/07/06 13:20:27 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:51:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 14:19:19 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 14:33:58 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_PRIVATE_INIT_H
+# define PS_PRIVATE_INIT_H
 
-#include "../ps_private_error.h"
+typedef struct s_data	t_data;
 
-void	ps_print_error(void)
-{
-	char*const	ps_error_messages[] = {
-	[PS_DUPLICATE] = "An argument was a duplicate.",
-	[PS_NOT_INTEGER] = "An argument was not an integer.",
-	};
+t_status	parse_argv(t_i32 argc, char **argv, t_data *data);
+t_status	sanitize_argc(t_i32 argc);
 
-	ft_putendl("Error");
-	ft_putendl(ps_error_messages[ps_get_error()]);
-}
+#endif

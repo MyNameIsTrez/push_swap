@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_print_error.c                                   :+:    :+:            */
+/*   ps_private_parse_argv.h                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/07/06 13:20:27 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:51:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 14:28:02 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 14:33:17 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_PRIVATE_PARSE_ARGV_H
+# define PS_PRIVATE_PARSE_ARGV_H
 
-#include "../ps_private_error.h"
 
-void	ps_print_error(void)
-{
-	char*const	ps_error_messages[] = {
-	[PS_DUPLICATE] = "An argument was a duplicate.",
-	[PS_NOT_INTEGER] = "An argument was not an integer.",
-	};
-
-	ft_putendl("Error");
-	ft_putendl(ps_error_messages[ps_get_error()]);
-}
+#endif

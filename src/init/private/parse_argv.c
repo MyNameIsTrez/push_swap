@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_print_error.c                                   :+:    :+:            */
+/*   parse_argv.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/07/06 13:20:27 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:51:44 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 14:18:51 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 14:55:24 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include "../ps_private_error.h"
+#include "parse_argv/ps_private_parse_argv.h"
 
-void	ps_print_error(void)
+t_status	parse_argv(t_i32 argc, char **argv, t_data *data)
 {
-	char*const	ps_error_messages[] = {
-	[PS_DUPLICATE] = "An argument was a duplicate.",
-	[PS_NOT_INTEGER] = "An argument was not an integer.",
-	};
+	t_i32	i;
+	t_i32	n;
 
-	ft_putendl("Error");
-	ft_putendl(ps_error_messages[ps_get_error()]);
+	data->a = ft_vector_new(sizeof(t_i32));
+	i = 1;
+	while (i < argc)
+	{
+		if (!ft_atoi_safe(argv[i], &n))
+			return (ps_set_error(PS_NOT_INTEGER));
+		ft_vector_push(&data->a, &n);
+		i++;
+	}
+	return (OK);
 }
