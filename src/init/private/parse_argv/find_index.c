@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   sanitize_argc.c                                    :+:    :+:            */
+/*   find_index.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/01 14:23:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:32:18 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 17:14:29 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 17:14:29 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_status	sanitize_argc(t_i32 argc)
+t_i32	find_index(t_i32 *array, t_i32 value)
 {
-	(void)argc;
-	return (OK);
+	t_i32	i;
+
+	i = 0;
+	while (array[i] != value)
+		i++;
+	return (i);
 }

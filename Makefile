@@ -6,7 +6,7 @@
 #    By: sbos <sbos@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/08/31 17:51:35 by sbos          #+#    #+#                  #
-#    Updated: 2022/08/31 17:55:54 by sbos          ########   odam.nl          #
+#    Updated: 2022/09/01 16:11:12 by sbos          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,7 @@ $(NAME): $(LIBFT_LIB_PATH) $(OBJECT_PATHS)
 ################################################################################
 
 $(LIBFT_LIB_PATH):
-	git submodule update --init --recursive
+	git submodule update --init --recursive --rebase --quiet
 	$(MAKE) -C $(LIBFT_PATH)
 
 ################################################################################
@@ -110,7 +110,7 @@ clean:
 
 .PHONY: fclean
 fclean: clean
-	git submodule update --init --recursive
+	git submodule update --init --recursive --rebase --quiet
 	rm -f $(FCLEANED_FILES)
 	$(MAKE) -C $(LIBFT_PATH) fclean
 

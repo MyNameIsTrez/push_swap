@@ -15,6 +15,6 @@
 
 typedef struct s_data	t_data;
 
-t_status	ps_init(t_i32 argc, char **argv, t_data *data);
+t_status	ps_init(size_t argc, char **argv, t_data *data);
 
 #endif

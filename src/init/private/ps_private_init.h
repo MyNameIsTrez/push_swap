@@ -6,7 +6,7 @@
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/01 14:19:19 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:33:58 by sbos          ########   odam.nl         */
+/*   Updated: 2022/09/01 15:33:37 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 typedef struct s_data	t_data;
 
-t_status	parse_argv(t_i32 argc, char **argv, t_data *data);
-t_status	sanitize_argc(t_i32 argc);
+t_status	normalize(t_data *data);
+t_status	parse_argv(size_t argc, char **argv, t_data *data);
 
 #endif
