@@ -13,12 +13,13 @@
 #ifndef PS_STRUCT_DATA_H
 # define PS_STRUCT_DATA_H
 
+typedef struct s_deque		t_deque;
 typedef enum e_operation	t_operation;
 
 typedef struct s_data
 {
-	t_i32		*a;
-	t_i32		*b;
+	t_deque		*a;
+	t_deque		*b;
 	t_operation	*operations;
 }	t_data;
 

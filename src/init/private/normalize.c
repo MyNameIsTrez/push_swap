@@ -20,7 +20,7 @@ t_status	normalize(t_data *data)
 	size_t	len;
 	size_t	i;
 
-	a2 = ft_vector_copy(data->a);
+	a2 = ft_vector_from_deque(data->a);
 	if (a2 == NULL)
 		return (ERROR);
 	len = ft_vector_get_size(a2);
@@ -30,7 +30,7 @@ t_status	normalize(t_data *data)
 	i = 0;
 	while (i < len)
 	{
-		data->a[i] = find_index(a2, data->a[i]);
+		*(int *)ft_deque_at(data->a, i) = find_index(a2, *(int *)ft_deque_at(data->a, i));
 		i++;
 	}
 	ft_vector_free(&a2);

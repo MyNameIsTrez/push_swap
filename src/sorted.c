@@ -16,12 +16,12 @@ bool	ps_is_sorted(t_data *data)
 {
 	size_t	i;
 
-	if (ft_vector_get_size(data->b) > 0)
+	if (ft_deque_size(data->b) > 0)
 		return (false);
-	i = ft_vector_get_size(data->a) - 1;
+	i = ft_deque_size(data->a) - 1;
 	while (i > 0)
 	{
-		if (data->a[i - 1] > data->a[i])
+		if (*(int *)ft_deque_at(data->a, i - 1) > *(int *)ft_deque_at(data->a, i))
 			return (false);
 		i--;
 	}
