@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   pa.c                                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 17:09:40 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 17:09:40 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#include "push_swap.h"
 
-typedef enum e_operation
+void	pa(t_data *data)
 {
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-}	t_operation;
+	int	*back;
 
-#endif
+	if (ft_deque_size(data->b) == 0)
+		return ;
+	back = ft_deque_back(data->b);
+	ft_deque_push_back(data->a, back);
+	ft_deque_pop_back(data->b);
+}

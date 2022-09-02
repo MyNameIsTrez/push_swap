@@ -15,6 +15,8 @@
 
 # include "ps_operation_enum.h"
 
+# include "functions/ps_operations_functions.h"
+
 void	ps_print_operations(t_data *data);
 
 #endif

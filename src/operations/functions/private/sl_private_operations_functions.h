@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   sl_private_operations_functions.h                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 17:40:42 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 17:40:42 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#ifndef SL_PRIVATE_OPERATIONS_FUNCTIONS_H
+# define SL_PRIVATE_OPERATIONS_FUNCTIONS_H
 
-typedef enum e_operation
-{
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-}	t_operation;
+void	r(t_deque *deque, t_data *data);
+void	rr(t_deque *deque, t_data *data);
+void	s(t_deque *deque, t_data *data);
 
 #endif

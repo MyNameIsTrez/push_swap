@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   r.c                                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 17:09:40 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 17:09:40 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#include "push_swap.h"
 
-typedef enum e_operation
+void	r(t_deque *deque, t_data *data)
 {
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-}	t_operation;
+	int	*back;
 
-#endif
+	// TODO: Should this function early-return if the deque is empty?
+	back = ft_deque_back(deque);
+	ft_deque_push_front(deque, back);
+	ft_deque_pop_back(deque);
+}
