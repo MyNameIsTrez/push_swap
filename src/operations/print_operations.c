@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_struct_data.h                                   :+:    :+:            */
+/*   print_operations.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 18:07:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:46:46 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 18:16:39 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 18:16:39 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_STRUCT_DATA_H
-# define PS_STRUCT_DATA_H
+#include "push_swap.h"
 
-typedef enum e_operation	t_operation;
+#include "private/print_operations/ps_private_print_operations.h"
 
-typedef struct s_data
+void	ps_print_operations(t_data *data)
 {
-	t_i32		*a;
-	t_i32		*b;
-	t_operation	*operations;
-}	t_data;
+	size_t	i;
+	size_t	len;
 
-#endif
+	i = 0;
+	len = ft_vector_get_size(data->operations);
+	while (i < len)
+	{
+		ft_putendl(get_operation_name(data->operations[i]));
+		i++;
+	}
+}

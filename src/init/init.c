@@ -24,5 +24,8 @@ t_status	ps_init(size_t argc, char **argv, t_data *data)
 	data->b = ft_vector_new_reserved(sizeof(t_i32), argc - 1);
 	if (data->b == NULL)
 		return (ERROR);
+	data->operations = ft_vector_new(sizeof(t_operation));
+	if (data->operations == NULL)
+		return (ERROR);
 	return (OK);
 }

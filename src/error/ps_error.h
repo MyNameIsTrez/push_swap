@@ -13,7 +13,7 @@
 #ifndef PS_ERROR_H
 # define PS_ERROR_H
 
-# include "ps_error_struct.h"
+# include "ps_error_enum.h"
 
 t_status	ps_any_error(void);
 void		ps_print_all_errors(void);

@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_struct_data.h                                   :+:    :+:            */
+/*   ps_operations.h                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 18:07:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:46:46 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 15:35:30 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 15:35:30 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_STRUCT_DATA_H
-# define PS_STRUCT_DATA_H
+#ifndef PS_OPERATIONS_H
+# define PS_OPERATIONS_H
 
-typedef enum e_operation	t_operation;
+# include "ps_operation_enum.h"
 
-typedef struct s_data
-{
-	t_i32		*a;
-	t_i32		*b;
-	t_operation	*operations;
-}	t_data;
+void	ps_print_operations(t_data *data);
 
 #endif

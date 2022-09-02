@@ -17,9 +17,10 @@
 
 # include "error/ps_error.h"
 # include "init/ps_init.h"
+# include "operations/ps_operations.h"
+# include "run/ps_run.h"
 # include "structs/ps_struct_data.h"
 
-void	ps_run(t_data *data);
 bool	ps_is_sorted(t_data *data);
 
 #endif

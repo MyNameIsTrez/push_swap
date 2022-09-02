@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_struct_data.h                                   :+:    :+:            */
+/*   get_operation_name.c                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 18:07:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:46:46 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 15:45:48 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 15:45:48 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_STRUCT_DATA_H
-# define PS_STRUCT_DATA_H
+#include "push_swap.h"
 
-typedef enum e_operation	t_operation;
-
-typedef struct s_data
+char	*get_operation_name(t_operation operation)
 {
-	t_i32		*a;
-	t_i32		*b;
-	t_operation	*operations;
-}	t_data;
+	static char	*operations[] = {
+	[sa] = "sa",
+	[sb] = "sb",
+	[ss] = "ss",
+	[pa] = "pa",
+	[pb] = "pb",
+	[ra] = "ra",
+	[rb] = "rb",
+	[rr] = "rr",
+	[rra] = "rra",
+	[rrb] = "rrb",
+	[rrr] = "rrr",
+	};
 
-#endif
+	return (operations[operation]);
+}

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_error_struct.h                                  :+:    :+:            */
+/*   ps_operation_enum.h                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 18:16:27 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:51:27 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_ERROR_STRUCT_H
-# define PS_ERROR_STRUCT_H
+#ifndef PS_OPERATION_ENUM_H
+# define PS_OPERATION_ENUM_H
 
-typedef enum e_ps_error
+typedef enum e_operation
 {
-	PS_OK,
-	PS_E_DUPLICATE,
-	PS_E_NOT_INTEGER,
-	PS_ERROR_COUNT,
-}	t_ps_error;
+	sa,
+	sb,
+	ss,
+	pa,
+	pb,
+	ra,
+	rb,
+	rr,
+	rra,
+	rrb,
+	rrr,
+}	t_operation;
 
 #endif

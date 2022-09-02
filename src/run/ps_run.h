@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_struct_data.h                                   :+:    :+:            */
+/*   ps_run.h                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/08/31 18:07:57 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 14:46:46 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 18:12:22 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 18:12:22 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_STRUCT_DATA_H
-# define PS_STRUCT_DATA_H
+#ifndef PS_RUN_H
+# define PS_RUN_H
 
-typedef enum e_operation	t_operation;
-
-typedef struct s_data
-{
-	t_i32		*a;
-	t_i32		*b;
-	t_operation	*operations;
-}	t_data;
+void	ps_run(t_data *data);
 
 #endif
