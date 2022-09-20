@@ -19,6 +19,7 @@ t_status	normalize(t_data *data, t_i32 *unnormalized_a)
 	size_t	len;
 	t_i32	*sorted_unnormalized_a;
 	size_t	i;
+	size_t	index;
 
 	len = ft_vector_get_size(unnormalized_a);
 	sorted_unnormalized_a = ft_vector_copy(unnormalized_a);
@@ -33,7 +34,8 @@ t_status	normalize(t_data *data, t_i32 *unnormalized_a)
 	i = 0;
 	while (i < len)
 	{
-		*(t_u32 *)ft_deque_at(data->a, i) = find_index(sorted_unnormalized_a, unnormalized_a[i]);
+		index = find_index(sorted_unnormalized_a, unnormalized_a[i]);
+		ft_deque_push_back(data->a, &index);
 		i++;
 	}
 	ft_vector_free(&sorted_unnormalized_a);
