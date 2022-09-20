@@ -16,5 +16,5 @@
 
 void	rrb(t_data *data)
 {
-	rr(data->b, data);
+	rrx(data->b);
 }

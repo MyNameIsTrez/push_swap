@@ -14,13 +14,13 @@
 
 #include "../ps_private_error.h"
 
+// The example is stupid and doesn't expect this:
+// char*const	ps_error_messages[] = {
+// [PS_E_NOT_INTEGER] = "Non-integer argument.",
+// [PS_E_DUPLICATE] = "Duplicate argument.",
+// };
+// ft_putendl_fd(ps_error_messages[ps_get_error()], STDERR_FILENO);
 void	ps_print_error(void)
 {
-	char*const	ps_error_messages[] = {
-	[PS_E_NOT_INTEGER] = "Non-integer argument.",
-	[PS_E_DUPLICATE] = "Duplicate argument.",
-	};
-
 	ft_putendl_fd("Error", STDERR_FILENO);
-	ft_putendl_fd(ps_error_messages[ps_get_error()], STDERR_FILENO);
 }

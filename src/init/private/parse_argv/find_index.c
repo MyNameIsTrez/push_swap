@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-t_i32	find_index(t_i32 *array, t_i32 value)
+t_u32	find_index(t_i32 *array, t_i32 value)
 {
-	t_i32	i;
+	t_u32	i;
 
 	i = 0;
 	while (array[i] != value)

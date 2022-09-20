@@ -16,15 +16,18 @@
 
 t_status	ps_init(size_t argc, char **argv, t_data *data)
 {
+	t_i32	*unnormalized_a;
+
 	ft_bzero(data, sizeof(t_data));
-	data->a = ft_deque_new_reserved(sizeof(t_i32), argc - 1);
-	if (data->a == NULL)
+	unnormalized_a = ft_vector_new_reserved(sizeof(t_i32), argc - 1);
+	if (unnormalized_a == NULL)
 		return (ERROR);
-	if (parse_argv(argc, argv, data) != OK)
+	if (parse_argv(argc, argv, &unnormalized_a) != OK)
 		return (ERROR);
-	if (normalize(data) != OK)
+	if (normalize(data, unnormalized_a) != OK)
 		return (ERROR);
-	data->b = ft_deque_new_reserved(sizeof(t_i32), argc - 1);
+	ft_vector_free(&unnormalized_a);
+	data->b = ft_deque_new_reserved(sizeof(t_u32), argc - 1);
 	if (data->b == NULL)
 		return (ERROR);
 	data->operations = ft_vector_new(sizeof(t_operation));

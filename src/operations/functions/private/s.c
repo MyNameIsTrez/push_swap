@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	s(t_deque *deque, t_data *data)
+void	s(t_deque *deque)
 {
 	int	back_value;
 	int	second_back_value;

@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-#include "functions/private/sl_private_operations_functions.h"
+#include "private/sl_private_operations_functions.h"
 
 void	sa(t_data *data)
 {
-	s(data->a, data);
+	s(data->a);
 }

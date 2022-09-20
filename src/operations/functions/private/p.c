@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   rr.c                                               :+:    :+:            */
+/*   p.c                                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -12,12 +12,13 @@
 
 #include "push_swap.h"
 
-void	rr(t_deque *deque, t_data *data)
+void	p(t_deque *deque_from, t_deque *deque_to)
 {
-	int	*front;
+	int	*back;
 
-	// TODO: Should this function early-return if the deque is empty?
-	front = ft_deque_front(deque);
-	ft_deque_push_back(deque, front);
-	ft_deque_pop_front(deque);
+	if (ft_deque_size(deque_from) == 0)
+		return ;
+	back = ft_deque_back(deque_from);
+	ft_deque_push_back(deque_to, back);
+	ft_deque_pop_back(deque_from);
 }

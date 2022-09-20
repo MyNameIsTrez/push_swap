@@ -14,7 +14,7 @@
 
 #include "parse_argv/ps_private_parse_argv.h"
 
-t_status	parse_argv(size_t argc, char **argv, t_data *data)
+t_status	parse_argv(size_t argc, char **argv, t_i32 **unnormalized_a)
 {
 	size_t	i;
 	t_i32	n;
@@ -24,7 +24,7 @@ t_status	parse_argv(size_t argc, char **argv, t_data *data)
 	{
 		if (!ft_atoi_safe(argv[i], &n))
 			return (ps_set_error(PS_E_NOT_INTEGER));
-		ft_deque_push_back(data->a, &n);
+		ft_vector_push(unnormalized_a, &n);
 		i++;
 	}
 	return (OK);

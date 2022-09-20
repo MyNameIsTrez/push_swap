@@ -13,8 +13,9 @@
 #ifndef SL_PRIVATE_OPERATIONS_FUNCTIONS_H
 # define SL_PRIVATE_OPERATIONS_FUNCTIONS_H
 
-void	r(t_deque *deque, t_data *data);
-void	rr(t_deque *deque, t_data *data);
-void	s(t_deque *deque, t_data *data);
+void	p(t_deque *deque_from, t_deque *deque_to);
+void	r(t_deque *deque);
+void	rrx(t_deque *deque);
+void	s(t_deque *deque);
 
 #endif

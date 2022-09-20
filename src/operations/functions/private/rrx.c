@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ra.c                                               :+:    :+:            */
+/*   rrx.c                                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -12,9 +12,12 @@
 
 #include "push_swap.h"
 
-#include "private/sl_private_operations_functions.h"
-
-void	ra(t_data *data)
+void	rrx(t_deque *deque)
 {
-	r(data->a);
+	int	*front;
+
+	// TODO: Should this function early-return if the deque is empty?
+	front = ft_deque_front(deque);
+	ft_deque_push_back(deque, front);
+	ft_deque_pop_front(deque);
 }

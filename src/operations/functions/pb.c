@@ -12,13 +12,9 @@
 
 #include "push_swap.h"
 
+#include "private/sl_private_operations_functions.h"
+
 void	pb(t_data *data)
 {
-	int	*back;
-
-	if (ft_deque_size(data->a) == 0)
-		return ;
-	back = ft_deque_back(data->a);
-	ft_deque_push_back(data->b, back);
-	ft_deque_pop_back(data->a);
+	p(data->a, data->b);
 }

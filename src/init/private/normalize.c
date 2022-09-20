@@ -14,25 +14,28 @@
 
 #include "parse_argv/ps_private_parse_argv.h"
 
-t_status	normalize(t_data *data)
+t_status	normalize(t_data *data, t_i32 *unnormalized_a)
 {
-	t_i32	*a2;
 	size_t	len;
+	t_i32	*sorted_unnormalized_a;
 	size_t	i;
 
-	a2 = ft_vector_from_deque(data->a);
-	if (a2 == NULL)
+	len = ft_vector_get_size(unnormalized_a);
+	sorted_unnormalized_a = ft_vector_copy(unnormalized_a);
+	if (sorted_unnormalized_a == NULL)
 		return (ERROR);
-	len = ft_vector_get_size(a2);
-	ft_bubble_sort(a2, len);
-	if (has_duplicate(a2, len))
+	ft_bubble_sort(sorted_unnormalized_a, len);
+	if (has_duplicate(sorted_unnormalized_a, len))
 		return (ps_set_error(PS_E_DUPLICATE));
+	data->a = ft_deque_new_reserved(sizeof(t_u32), len);
+	if (data->a == NULL)
+		return (ERROR);
 	i = 0;
 	while (i < len)
 	{
-		*(int *)ft_deque_at(data->a, i) = find_index(a2, *(int *)ft_deque_at(data->a, i));
+		*(t_u32 *)ft_deque_at(data->a, i) = find_index(sorted_unnormalized_a, unnormalized_a[i]);
 		i++;
 	}
-	ft_vector_free(&a2);
+	ft_vector_free(&sorted_unnormalized_a);
 	return (OK);
 }

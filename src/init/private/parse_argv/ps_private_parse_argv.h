@@ -14,6 +14,6 @@
 # define PS_PRIVATE_PARSE_ARGV_H
 
 bool	has_duplicate(t_i32 *array, size_t len);
-t_i32	find_index(t_i32 *array, t_i32 value);
+t_u32	find_index(t_i32 *array, t_i32 value);
 
 #endif

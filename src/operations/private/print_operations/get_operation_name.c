@@ -15,17 +15,17 @@
 char	*get_operation_name(t_operation operation)
 {
 	static char	*operations[] = {
-	[sa] = "sa",
-	[sb] = "sb",
-	[ss] = "ss",
-	[pa] = "pa",
-	[pb] = "pb",
-	[ra] = "ra",
-	[rb] = "rb",
-	[rr] = "rr",
-	[rra] = "rra",
-	[rrb] = "rrb",
-	[rrr] = "rrr",
+	[SA] = "sa",
+	[SB] = "sb",
+	[SS] = "ss",
+	[PA] = "pa",
+	[PB] = "pb",
+	[RA] = "ra",
+	[RB] = "rb",
+	[RR] = "rr",
+	[RRA] = "rra",
+	[RRB] = "rrb",
+	[RRR] = "rrr",
 	};
 
 	return (operations[operation]);
