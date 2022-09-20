@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operations_functions.h                          :+:    :+:            */
+/*   ps_private_undo.h                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -10,19 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATIONS_FUNCTIONS_H
-# define PS_OPERATIONS_FUNCTIONS_H
+#ifndef PS_PRIVATE_UNDO_H
+# define PS_PRIVATE_UNDO_H
 
-bool	pa(t_data *data);
-bool	pb(t_data *data);
-bool	ra(t_data *data);
-bool	rb(t_data *data);
-bool	rr(t_data *data);
-bool	rra(t_data *data);
-bool	rrb(t_data *data);
-bool	rrr(t_data *data);
-bool	sa(t_data *data);
-bool	sb(t_data *data);
-bool	ss(t_data *data);
+typedef void	(*t_undo_operation_function)(t_data *data);
+
+void	undo_operation_call(t_operation operation, t_data *data);
+
+void	upa(t_data *data);
+void	upb(t_data *data);
+void	ura(t_data *data);
+void	urb(t_data *data);
+void	urr(t_data *data);
+void	urra(t_data *data);
+void	urrb(t_data *data);
+void	urrr(t_data *data);
+void	usa(t_data *data);
+void	usb(t_data *data);
+void	uss(t_data *data);
 
 #endif

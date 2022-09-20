@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   call_operation.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/02 15:45:48 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/02 15:45:48 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#include "push_swap.h"
 
-typedef enum e_operation
+#include "private/ps_private_operations.h"
+
+bool	ps_call_operation(t_operation operation, t_data *data)
 {
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-	OPERATION_COUNT
-}	t_operation;
+	static t_operation_function	operations[] = {
+	[SA] = sa,
+	[SB] = sb,
+	[SS] = ss,
+	[PA] = pa,
+	[PB] = pb,
+	[RA] = ra,
+	[RB] = rb,
+	[RR] = rr,
+	[RRA] = rra,
+	[RRB] = rrb,
+	[RRR] = rrr,
+	};
 
-#endif
+	return (operations[operation](data));
+}

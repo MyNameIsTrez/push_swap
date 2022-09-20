@@ -12,8 +12,12 @@
 
 #include "push_swap.h"
 
-void	rrr(t_data *data)
+bool	rrr(t_data *data)
 {
-	rra(data);
-	rrb(data);
+	bool	operated;
+
+	operated = false;
+	operated = rra(data) || operated;
+	operated = rrb(data) || operated;
+	return (operated);
 }

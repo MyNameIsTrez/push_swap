@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   ps_private_run.h                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/20 16:51:08 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/20 16:51:08 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#ifndef PS_PRIVATE_RUN_H
+# define PS_PRIVATE_RUN_H
 
-typedef enum e_operation
-{
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-	OPERATION_COUNT
-}	t_operation;
+# define BRUTEFORCE_NUMBER_COUNT_LIMIT 5
+
+void	bruteforce_bfs(t_data *data);
 
 #endif

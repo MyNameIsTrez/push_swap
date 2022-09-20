@@ -12,12 +12,14 @@
 
 #include "push_swap.h"
 
-void	r(t_deque *deque)
+bool	r(t_deque *deque)
 {
 	int	*back;
 
-	// TODO: Should this function early-return if the deque is empty?
+	if (ft_deque_size(deque) <= 1)
+		return (false);
 	back = ft_deque_back(deque);
 	ft_deque_push_front(deque, back);
 	ft_deque_pop_back(deque);
+	return (true);
 }

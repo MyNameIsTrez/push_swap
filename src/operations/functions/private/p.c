@@ -12,13 +12,14 @@
 
 #include "push_swap.h"
 
-void	p(t_deque *deque_from, t_deque *deque_to)
+bool	p(t_deque *deque_from, t_deque *deque_to)
 {
 	int	*back;
 
 	if (ft_deque_size(deque_from) == 0)
-		return ;
+		return (false);
 	back = ft_deque_back(deque_from);
 	ft_deque_push_back(deque_to, back);
 	ft_deque_pop_back(deque_from);
+	return (true);
 }

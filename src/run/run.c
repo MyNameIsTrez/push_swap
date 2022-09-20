@@ -12,7 +12,10 @@
 
 #include "push_swap.h"
 
+#include "private/ps_private_run.h"
+
 void	ps_run(t_data *data)
 {
-	(void)data;
+	if (ft_deque_size(data->a) <= BRUTEFORCE_NUMBER_COUNT_LIMIT)
+		bruteforce_bfs(data);
 }

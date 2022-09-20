@@ -14,7 +14,7 @@
 
 #include "private/sl_private_operations_functions.h"
 
-void	rra(t_data *data)
+bool	rra(t_data *data)
 {
-	rrx(data->a);
+	return (rrx(data->a));
 }

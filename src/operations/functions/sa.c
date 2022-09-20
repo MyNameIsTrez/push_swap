@@ -14,7 +14,7 @@
 
 #include "private/sl_private_operations_functions.h"
 
-void	sa(t_data *data)
+bool	sa(t_data *data)
 {
-	s(data->a);
+	return (s(data->a));
 }

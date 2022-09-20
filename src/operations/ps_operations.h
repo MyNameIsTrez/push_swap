@@ -17,6 +17,7 @@
 
 # include "functions/ps_operations_functions.h"
 
+bool	ps_call_operation(t_operation operation, t_data *data);
 void	ps_print_operations(t_data *data);
 
 #endif

@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   pa.c                                               :+:    :+:            */
+/*   bruteforce_bfs.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 17:09:40 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 17:09:40 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/01 18:00:51 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/01 18:00:51 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include "private/sl_private_operations_functions.h"
+#include "undo/ps_private_undo.h"
 
-bool	pa(t_data *data)
+void	bruteforce_bfs(t_data *data)
 {
-	return (p(data->b, data->a));
+	size_t		depth;
+	t_operation	operation;
+	bool		operated;
+
+	depth = 0;
+	operation = 0;
+	while (operation < OPERATION_COUNT)
+	{
+		operated = ps_call_operation(operation, data);
+		if (ps_is_sorted(data))
+			return ;
+		if (operated)
+			undo_operation_call(operation, data);
+		// BFS
+		// if (depth < BRUTEFORCE_MAX_DEPTH)
+		operation++;
+	}
 }

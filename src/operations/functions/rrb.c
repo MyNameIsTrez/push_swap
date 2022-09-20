@@ -14,7 +14,7 @@
 
 #include "private/sl_private_operations_functions.h"
 
-void	rrb(t_data *data)
+bool	rrb(t_data *data)
 {
-	rrx(data->b);
+	return (rrx(data->b));
 }

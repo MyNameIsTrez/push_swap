@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operation_enum.h                                :+:    :+:            */
+/*   ps_private_operations.h                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:49:12 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:49:12 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/20 16:58:50 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/20 16:58:50 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATION_ENUM_H
-# define PS_OPERATION_ENUM_H
+#ifndef PS_PRIVATE_OPERATIONS_H
+# define PS_PRIVATE_OPERATIONS_H
 
-typedef enum e_operation
-{
-	SA,
-	SB,
-	SS,
-	PA,
-	PB,
-	RA,
-	RB,
-	RR,
-	RRA,
-	RRB,
-	RRR,
-	OPERATION_COUNT
-}	t_operation;
+typedef bool	(*t_operation_function)(t_data *data);
 
 #endif
