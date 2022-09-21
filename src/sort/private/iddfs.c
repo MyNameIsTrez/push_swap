@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   bruteforce_bfs.c                                   :+:    :+:            */
+/*   iddfs.c                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/01 18:00:51 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 18:00:51 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/21 14:36:00 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/21 14:36:00 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-#include "undo/ps_private_undo.h"
+#include "iddfs/ps_private_iddfs.h"
 
-void	bruteforce_bfs(t_data *data)
+void	iddfs(t_data *data)
 {
-	size_t		depth;
-	t_operation	operation;
-	bool		operated;
+	size_t	max_depth;
 
-	depth = 0;
-	operation = 0;
-	while (operation < OPERATION_COUNT)
+	max_depth = 1;
+	while (true)
 	{
-		operated = ps_call_operation(operation, data);
-		if (ps_is_sorted(data))
+		if (dfs(0, max_depth, data))
 			return ;
-		if (operated)
-			undo_operation_call(operation, data);
-		// BFS
-		// if (depth < BRUTEFORCE_MAX_DEPTH)
-		operation++;
+		max_depth++;
 	}
 }

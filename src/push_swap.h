@@ -18,7 +18,7 @@
 # include "error/ps_error.h"
 # include "init/ps_init.h"
 # include "operations/ps_operations.h"
-# include "run/ps_run.h"
+# include "sort/ps_sort.h"
 # include "structs/ps_struct_data.h"
 
 bool	ps_is_sorted(t_data *data);

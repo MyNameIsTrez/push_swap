@@ -25,7 +25,7 @@ int	main(t_i32 argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	if (!ps_is_sorted(&data))
-		ps_run(&data);
+		ps_sort(&data);
 	ps_print_operations(&data);
 	ft_free_allocations();
 	return (EXIT_SUCCESS);

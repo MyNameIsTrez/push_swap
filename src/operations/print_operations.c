@@ -17,13 +17,11 @@
 void	ps_print_operations(t_data *data)
 {
 	size_t	i;
-	size_t	len;
 
-	i = 0;
-	len = ft_vector_get_size(data->operations);
-	while (i < len)
+	i = ft_vector_get_size(data->operations);
+	while (i > 0)
 	{
+		i--;
 		ft_putendl(get_operation_name(data->operations[i]));
-		i++;
 	}
 }

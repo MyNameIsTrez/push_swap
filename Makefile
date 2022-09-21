@@ -45,7 +45,7 @@ HEADERS += $(shell find ./src -type f -name "*.h")
 FCLEANED_FILES := $(NAME)
 
 ifdef O3
-CFLAGS += -O3
+CFLAGS += -Ofast
 endif
 
 ifdef DEBUG

@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   run.c                                              :+:    :+:            */
+/*   ps_private_iddfs.h                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/01 18:00:51 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/01 18:00:51 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/21 14:39:00 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/21 14:39:00 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_PRIVATE_IDDFS_H
+# define PS_PRIVATE_IDDFS_H
 
-#include "private/ps_private_run.h"
+bool	dfs(size_t depth, size_t max_depth, t_data *data);
 
-void	ps_run(t_data *data)
-{
-	if (ft_deque_size(data->a) <= BRUTEFORCE_NUMBER_COUNT_LIMIT)
-		bruteforce_bfs(data);
-}
+#endif
