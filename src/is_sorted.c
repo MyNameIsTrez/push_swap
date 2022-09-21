@@ -21,7 +21,8 @@ bool	ps_is_sorted(t_data *data)
 	i = ft_deque_size(data->a) - 1;
 	while (i > 0)
 	{
-		if (*(int *)ft_deque_at(data->a, i - 1) < *(int *)ft_deque_at(data->a, i))
+		if (*(int *)ft_deque_at(data->a, i - 1)
+			< *(int *)ft_deque_at(data->a, i))
 			return (false);
 		i--;
 	}

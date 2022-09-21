@@ -15,6 +15,7 @@
 
 typedef struct s_data	t_data;
 
+size_t		get_max_operation_count(t_data *data);
 t_status	normalize(t_data *data, t_i32 *unnormalized_a);
 t_status	parse_argv(size_t argc, char **argv, t_i32 **unnormalized_a);
 

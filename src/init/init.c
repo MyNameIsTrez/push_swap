@@ -30,8 +30,8 @@ t_status	ps_init(size_t argc, char **argv, t_data *data)
 	data->b = ft_deque_new_reserved(sizeof(t_u32), argc - 1);
 	if (data->b == NULL)
 		return (ERROR);
-	// TODO: Calculate the maximum size of operations so that push() can't fail anywhere
-	data->operations = ft_deque_new_reserved(sizeof(t_operation), 999999);
+	data->operations = ft_deque_new_reserved(sizeof(t_operation),
+			get_max_operation_count(data));
 	if (data->operations == NULL)
 		return (ERROR);
 	return (OK);

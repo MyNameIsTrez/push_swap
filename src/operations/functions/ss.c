@@ -17,7 +17,7 @@ bool	ss(t_data *data)
 	bool	operated;
 
 	operated = false;
-	operated = sa(data) || operated;
-	operated = sb(data) || operated;
+	operated = (sa(data) || operated);
+	operated = (sb(data) || operated);
 	return (operated);
 }

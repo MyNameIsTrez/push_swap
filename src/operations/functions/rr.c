@@ -17,7 +17,7 @@ bool	rr(t_data *data)
 	bool	operated;
 
 	operated = false;
-	operated = ra(data) || operated;
-	operated = rb(data) || operated;
+	operated = (ra(data) || operated);
+	operated = (rb(data) || operated);
 	return (operated);
 }

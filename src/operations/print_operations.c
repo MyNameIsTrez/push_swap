@@ -16,12 +16,14 @@
 
 void	ps_print_operations(t_data *data)
 {
-	size_t	i;
+	size_t		i;
+	t_operation	operation;
 
 	i = 0;
 	while (i < ft_deque_size(data->operations))
 	{
-		ft_putendl(get_operation_name(*(t_operation *)ft_deque_at(data->operations, i)));
+		operation = *(t_operation *)ft_deque_at(data->operations, i);
+		ft_putendl(get_operation_name(operation));
 		i++;
 	}
 }
