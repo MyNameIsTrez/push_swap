@@ -18,6 +18,6 @@ void	ps_sort(t_data *data)
 {
 	if (ft_deque_size(data->a) <= BRUTEFORCE_NUMBER_COUNT_LIMIT)
 		iddfs(data);
-	// else
-	// 	radix(data);
+	else
+		radix(data);
 }

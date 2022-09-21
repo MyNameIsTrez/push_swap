@@ -18,10 +18,10 @@ void	ps_print_operations(t_data *data)
 {
 	size_t	i;
 
-	i = ft_vector_get_size(data->operations);
-	while (i > 0)
+	i = 0;
+	while (i < ft_deque_size(data->operations))
 	{
-		i--;
-		ft_putendl(get_operation_name(data->operations[i]));
+		ft_putendl(get_operation_name(*(t_operation *)ft_deque_at(data->operations, i)));
+		i++;
 	}
 }

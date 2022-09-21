@@ -13,8 +13,9 @@
 #ifndef PS_PRIVATE_SORT_H
 # define PS_PRIVATE_SORT_H
 
-# define BRUTEFORCE_NUMBER_COUNT_LIMIT 6
+# define BRUTEFORCE_NUMBER_COUNT_LIMIT 5
 
 void	iddfs(t_data *data);
+void	radix(t_data *data);
 
 #endif

@@ -26,7 +26,7 @@ bool	dfs(size_t depth, size_t max_depth, t_data *data)
 		if (ps_is_sorted(data)
 			|| (depth + 1 < max_depth && dfs(depth + 1, max_depth, data)))
 		{
-			ft_vector_push(&data->operations, &operation);
+			add_operation_front(operation, data);
 			return (true);
 		}
 		if (operated)

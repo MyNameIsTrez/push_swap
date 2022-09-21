@@ -18,9 +18,9 @@ typedef enum e_operation	t_operation;
 
 typedef struct s_data
 {
-	t_deque		*a;
-	t_deque		*b;
-	t_operation	*operations;
+	t_deque	*a;
+	t_deque	*b;
+	t_deque	*operations;
 }	t_data;
 
 #endif

@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_operations.h                                    :+:    :+:            */
+/*   add_operation_front.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 15:35:30 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 15:35:30 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/21 18:03:17 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/21 18:03:17 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_OPERATIONS_H
-# define PS_OPERATIONS_H
+#include "push_swap.h"
 
-# include "ps_operation_enum.h"
-
-# include "functions/ps_operations_functions.h"
-
-void	add_operation_back(t_operation operation, t_data *data);
-void	add_operation_front(t_operation operation, t_data *data);
-bool	ps_call_operation(t_operation operation, t_data *data);
-void	ps_print_operations(t_data *data);
-
-#endif
+void	add_operation_front(t_operation operation, t_data *data)
+{
+	ft_deque_push_front(data->operations, &operation);
+}
