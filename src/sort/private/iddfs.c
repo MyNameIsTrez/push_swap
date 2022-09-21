@@ -19,10 +19,6 @@ void	iddfs(t_data *data)
 	size_t	max_depth;
 
 	max_depth = 1;
-	while (true)
-	{
-		if (dfs(0, max_depth, data))
-			return ;
+	while (!dfs(0, max_depth, data))
 		max_depth++;
-	}
 }
