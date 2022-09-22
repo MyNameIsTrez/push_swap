@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_max_operation_count.c                          :+:    :+:            */
+/*   get_max_radix_sort_operations.c                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-size_t	get_max_operation_count(t_data *data)
+size_t	get_max_radix_sort_operations(t_data *data)
 {
 	size_t	highest_number;
 	size_t	bit_count_highest;

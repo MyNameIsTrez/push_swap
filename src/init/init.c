@@ -31,7 +31,7 @@ t_status	ps_init(size_t argc, char **argv, t_data *data)
 	if (data->b == NULL)
 		return (ERROR);
 	data->operations = ft_deque_new_reserved(sizeof(t_operation),
-			get_max_operation_count(data));
+			get_max_radix_sort_operations(data));
 	if (data->operations == NULL)
 		return (ERROR);
 	return (OK);

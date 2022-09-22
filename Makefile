@@ -30,15 +30,86 @@ LIBS := $(LIBFT)
 
 ################################################################################
 
-SOURCES += $(shell find ./src -type f -name "*.c")
+# SOURCES += $(shell find ./src -type f -name "*.c")
 
-# SOURCES +=\
+SOURCES +=\
+./src/error/private/print_all_errors/ps_print_error.c\
+./src/error/private/ps_get_error.c\
+./src/error/private/ps_get_error_ptr.c\
+./src/error/ps_any_error.c\
+./src/error/ps_print_all_errors.c\
+./src/error/ps_set_error.c\
+./src/init/private/parse_argv/find_index.c\
+./src/init/private/parse_argv/has_duplicate.c\
+./src/init/private/get_max_radix_sort_operations.c\
+./src/init/private/normalize.c\
+./src/init/private/parse_argv.c\
+./src/init/init.c\
+./src/operations/functions/private/p.c\
+./src/operations/functions/private/r.c\
+./src/operations/functions/private/rrx.c\
+./src/operations/functions/private/s.c\
+./src/operations/functions/pa.c\
+./src/operations/functions/pb.c\
+./src/operations/functions/ra.c\
+./src/operations/functions/rb.c\
+./src/operations/functions/rr.c\
+./src/operations/functions/rra.c\
+./src/operations/functions/rrb.c\
+./src/operations/functions/rrr.c\
+./src/operations/functions/sa.c\
+./src/operations/functions/sb.c\
+./src/operations/functions/ss.c\
+./src/operations/private/print_operations/get_operation_name.c\
+./src/operations/add_operation_back.c\
+./src/operations/add_operation_front.c\
+./src/operations/call_operation.c\
+./src/operations/print_operations.c\
+./src/sort/private/add_and_execute_operations/add_and_execute.c\
+./src/sort/private/iddfs/undo/pa.c\
+./src/sort/private/iddfs/undo/pb.c\
+./src/sort/private/iddfs/undo/ra.c\
+./src/sort/private/iddfs/undo/rb.c\
+./src/sort/private/iddfs/undo/rr.c\
+./src/sort/private/iddfs/undo/rra.c\
+./src/sort/private/iddfs/undo/rrb.c\
+./src/sort/private/iddfs/undo/rrr.c\
+./src/sort/private/iddfs/undo/sa.c\
+./src/sort/private/iddfs/undo/sb.c\
+./src/sort/private/iddfs/undo/ss.c\
+./src/sort/private/iddfs/undo/undo_operation_call.c\
+./src/sort/private/iddfs/dfs.c\
+./src/sort/private/iddfs.c\
+./src/sort/private/radix.c\
+./src/sort/sort.c\
+./src/is_sorted.c\
+./src/main.c
 
 ################################################################################
 
-HEADERS += $(shell find ./src -type f -name "*.h")
+# HEADERS += $(shell find ./src -type f -name "*.h")
 
-# HEADERS +=\
+HEADERS +=\
+./src/error/private/print_all_errors/ps_private_print_all_errors.h\
+./src/error/private/ps_private_error.h\
+./src/error/ps_error.h\
+./src/error/ps_error_enum.h\
+./src/init/private/parse_argv/ps_private_parse_argv.h\
+./src/init/private/ps_private_init.h\
+./src/init/ps_init.h\
+./src/operations/functions/private/sl_private_operations_functions.h\
+./src/operations/functions/ps_operations_functions.h\
+./src/operations/private/print_operations/ps_private_print_operations.h\
+./src/operations/private/ps_private_operations.h\
+./src/operations/ps_operation_enum.h\
+./src/operations/ps_operations.h\
+./src/sort/private/add_and_execute_operations/ps_private_add_and_execute_operations.h\
+./src/sort/private/iddfs/undo/ps_private_undo.h\
+./src/sort/private/iddfs/ps_private_iddfs.h\
+./src/sort/private/ps_private_sort.h\
+./src/sort/ps_sort.h\
+./src/structs/ps_struct_data.h\
+./src/push_swap.h
 
 ################################################################################
 
