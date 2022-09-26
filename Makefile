@@ -12,8 +12,6 @@
 
 ################################################################################
 
-NAME := push_swap
-
 CC := cc
 
 OBJ_DIR := obj
@@ -30,9 +28,9 @@ LIBS := $(LIBFT)
 
 ################################################################################
 
-# SOURCES += $(shell find ./src -type f -name "*.c")
+# PUSH_SWAP_SOURCES += $(shell find ./src -type f -name "*.c")
 
-SOURCES +=\
+SHARED_SOURCES :=\
 ./src/error/private/print_all_errors/ps_print_error.c\
 ./src/error/private/ps_get_error.c\
 ./src/error/private/ps_get_error_ptr.c\
@@ -45,6 +43,9 @@ SOURCES +=\
 ./src/init/private/normalize.c\
 ./src/init/private/parse_argv.c\
 ./src/init/init.c\
+./src/is_sorted.c
+
+PUSH_SWAP_SOURCES :=\
 ./src/operations/functions/private/p.c\
 ./src/operations/functions/private/r.c\
 ./src/operations/functions/private/rrx.c\
@@ -82,8 +83,10 @@ SOURCES +=\
 ./src/sort/private/iddfs.c\
 ./src/sort/private/radix.c\
 ./src/sort/sort.c\
-./src/is_sorted.c\
-./src/main.c
+./src/push_swap.c
+
+CHECKER_SOURCES :=\
+./src/checker.c
 
 ################################################################################
 
@@ -113,8 +116,6 @@ HEADERS +=\
 
 ################################################################################
 
-FCLEANED_FILES := $(NAME)
-
 ifdef O3
 CFLAGS += -Ofast
 endif
@@ -134,6 +135,16 @@ CFLAGS += -DBONUS=0
 endif
 
 ################################################################################
+
+ifdef BONUS
+NAME := checker
+SOURCES := $(SHARED_SOURCES) $(CHECKER_SOURCES)
+else
+NAME := push_swap
+SOURCES := $(SHARED_SOURCES) $(PUSH_SWAP_SOURCES)
+endif
+
+FCLEANED_FILES := $(NAME)
 
 OBJECT_PATHS := $(addprefix $(OBJ_DIR)/,$(SOURCES:.c=.o))
 

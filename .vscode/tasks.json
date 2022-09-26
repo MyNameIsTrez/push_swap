@@ -5,6 +5,14 @@
 			"label": "Build push_swap",
 			"type": "shell",
 			"command": "make",
+			"args": [ "DEBUG=1", "SAN=", "O3=", "--jobs=1" ],
+			"problemMatcher": ["$gcc"],
+			"group": "build"
+		},
+		{
+			"label": "Build checker",
+			"type": "shell",
+			"command": "make",
 			"args": [ "bonus", "DEBUG=1", "SAN=", "O3=", "--jobs=1" ],
 			"problemMatcher": ["$gcc"],
 			"group": "build"
