@@ -16,7 +16,7 @@
 # include "ps_error_enum.h"
 
 t_status	ps_any_error(void);
-void		ps_print_all_errors(void);
+void		ps_print_error(void);
 t_status	ps_set_error(t_ps_error ps_error);
 
 #endif

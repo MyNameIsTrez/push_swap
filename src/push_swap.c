@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   push_swap.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
@@ -20,7 +20,7 @@ int	main(t_i32 argc, char **argv)
 		return (EXIT_SUCCESS);
 	if (ps_init((size_t)argc, argv, &data) != OK)
 	{
-		ps_print_all_errors();
+		ps_print_error();
 		ft_free_allocations();
 		return (EXIT_FAILURE);
 	}

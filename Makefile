@@ -31,11 +31,10 @@ LIBS := $(LIBFT)
 # PUSH_SWAP_SOURCES += $(shell find ./src -type f -name "*.c")
 
 SHARED_SOURCES :=\
-./src/error/private/print_all_errors/ps_print_error.c\
 ./src/error/private/ps_get_error.c\
 ./src/error/private/ps_get_error_ptr.c\
 ./src/error/ps_any_error.c\
-./src/error/ps_print_all_errors.c\
+./src/error/ps_print_error.c\
 ./src/error/ps_set_error.c\
 ./src/init/private/parse_argv/find_index.c\
 ./src/init/private/parse_argv/has_duplicate.c\
@@ -93,7 +92,6 @@ CHECKER_SOURCES :=\
 # HEADERS += $(shell find ./src -type f -name "*.h")
 
 HEADERS +=\
-./src/error/private/print_all_errors/ps_private_print_all_errors.h\
 ./src/error/private/ps_private_error.h\
 ./src/error/ps_error.h\
 ./src/error/ps_error_enum.h\
