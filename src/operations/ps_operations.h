@@ -20,6 +20,7 @@
 void	add_operation_back(t_operation operation, t_data *data);
 void	add_operation_front(t_operation operation, t_data *data);
 bool	ps_call_operation(t_operation operation, t_data *data);
+char	*get_operation_name(t_operation operation);
 void	ps_print_operations(t_data *data);
 
 #endif

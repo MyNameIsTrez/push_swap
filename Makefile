@@ -28,8 +28,6 @@ LIBS := $(LIBFT)
 
 ################################################################################
 
-# PUSH_SWAP_SOURCES += $(shell find ./src -type f -name "*.c")
-
 SHARED_SOURCES :=\
 ./src/error/private/ps_get_error.c\
 ./src/error/private/ps_get_error_ptr.c\
@@ -42,9 +40,6 @@ SHARED_SOURCES :=\
 ./src/init/private/normalize.c\
 ./src/init/private/parse_argv.c\
 ./src/init/init.c\
-./src/is_sorted.c
-
-PUSH_SWAP_SOURCES :=\
 ./src/operations/functions/private/p.c\
 ./src/operations/functions/private/r.c\
 ./src/operations/functions/private/rrx.c\
@@ -60,10 +55,13 @@ PUSH_SWAP_SOURCES :=\
 ./src/operations/functions/sa.c\
 ./src/operations/functions/sb.c\
 ./src/operations/functions/ss.c\
-./src/operations/private/print_operations/get_operation_name.c\
+./src/operations/call_operation.c\
+./src/operations/get_operation_name.c\
+./src/is_sorted.c
+
+PUSH_SWAP_SOURCES :=\
 ./src/operations/add_operation_back.c\
 ./src/operations/add_operation_front.c\
-./src/operations/call_operation.c\
 ./src/operations/print_operations.c\
 ./src/sort/private/add_and_execute_operations/add_and_execute.c\
 ./src/sort/private/iddfs/undo/pa.c\
@@ -85,13 +83,15 @@ PUSH_SWAP_SOURCES :=\
 ./src/push_swap.c
 
 CHECKER_SOURCES :=\
+./src/checker/private/get_operation_from_line.c\
+./src/checker/run_operations.c\
 ./src/checker.c
 
 ################################################################################
 
-# HEADERS += $(shell find ./src -type f -name "*.h")
-
 HEADERS +=\
+./src/checker/private/ps_private_checker.h\
+./src/checker/ps_checker.h\
 ./src/error/private/ps_private_error.h\
 ./src/error/ps_error.h\
 ./src/error/ps_error_enum.h\
@@ -100,7 +100,6 @@ HEADERS +=\
 ./src/init/ps_init.h\
 ./src/operations/functions/private/sl_private_operations_functions.h\
 ./src/operations/functions/ps_operations_functions.h\
-./src/operations/private/print_operations/ps_private_print_operations.h\
 ./src/operations/private/ps_private_operations.h\
 ./src/operations/ps_operation_enum.h\
 ./src/operations/ps_operations.h\

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_print_error.c                                   :+:    :+:            */
+/*   ps_checker.h                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/07/06 14:12:24 by sbos          #+#    #+#                 */
-/*   Updated: 2022/08/31 18:26:50 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/27 13:31:13 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/27 13:31:13 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PS_CHECKER_H
+# define PS_CHECKER_H
 
-void	ps_print_error(void)
-{
-	ft_putendl_fd("Error", STDERR_FILENO);
-}
+typedef struct s_data	t_data;
+
+t_status	ps_run_operations(t_data *data);
+
+#endif

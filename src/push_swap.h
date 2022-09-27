@@ -15,6 +15,7 @@
 
 # include "libft.h"
 
+# include "checker/ps_checker.h"
 # include "error/ps_error.h"
 # include "init/ps_init.h"
 # include "operations/ps_operations.h"

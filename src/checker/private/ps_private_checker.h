@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ps_private_print_operations.h                      :+:    :+:            */
+/*   ps_private_checker.h                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/02 16:00:36 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/02 16:00:36 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/27 13:59:51 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/27 13:59:51 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PS_PRIVATE_PRINT_OPERATIONS_H
-# define PS_PRIVATE_PRINT_OPERATIONS_H
+#ifndef PS_PRIVATE_CHECKER_H
+# define PS_PRIVATE_CHECKER_H
 
-char	*get_operation_name(t_operation operation);
+t_status	ps_get_operation_from_line(char *line, t_operation *operation);
 
 #endif

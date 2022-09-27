@@ -18,6 +18,7 @@ typedef enum e_ps_error
 	PS_OK,
 	PS_E_DUPLICATE,
 	PS_E_NOT_INTEGER,
+	PS_E_UNKNOWN_OPERATION,
 	PS_ERROR_COUNT,
 }	t_ps_error;
 

@@ -7,7 +7,10 @@
 			"command": "make",
 			"args": [ "DEBUG=1", "SAN=", "O3=", "--jobs=1" ],
 			"problemMatcher": ["$gcc"],
-			"group": "build"
+			"group": "build",
+			"presentation": {
+				"reveal": "silent",
+			}
 		},
 		{
 			"label": "Build checker",
@@ -15,7 +18,10 @@
 			"command": "make",
 			"args": [ "bonus", "DEBUG=1", "SAN=", "O3=", "--jobs=1" ],
 			"problemMatcher": ["$gcc"],
-			"group": "build"
+			"group": "build",
+			"presentation": {
+				"reveal": "silent",
+			}
 		}
 	]
 }

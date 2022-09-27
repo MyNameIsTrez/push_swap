@@ -12,8 +12,6 @@
 
 #include "push_swap.h"
 
-#include "private/print_operations/ps_private_print_operations.h"
-
 void	ps_print_operations(t_data *data)
 {
 	size_t		i;

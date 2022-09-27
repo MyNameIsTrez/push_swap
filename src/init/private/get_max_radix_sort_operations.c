@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_max_radix_sort_operations.c                          :+:    :+:            */
+/*   get_max_radix_sort_operations.c                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sbos <sbos@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/21 19:16:32 by sbos          #+#    #+#                 */
-/*   Updated: 2022/09/21 19:16:32 by sbos          ########   odam.nl         */
+/*   Created: 2022/09/27 15:21:19 by sbos          #+#    #+#                 */
+/*   Updated: 2022/09/27 15:21:19 by sbos          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	get_max_radix_sort_operations(t_data *data)
 	while (highest_number >> bit_count_highest != 0)
 		bit_count_highest++;
 	total_bit_count = ft_deque_size(data->a) * bit_count_highest;
-	return (total_bit_count * 2);
+	return (total_bit_count * 2 + 1);
 }
 
 /*

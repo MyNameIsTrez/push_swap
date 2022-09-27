@@ -14,20 +14,24 @@
 
 int	main(t_i32 argc, char **argv)
 {
-	t_data	data;
+	t_data		data;
 
 	if (argc <= 1)
 		return (EXIT_SUCCESS);
-	if (ps_init((size_t)argc, argv, &data) != OK)
+	if (ps_init((size_t)argc, argv, &data) != OK
+		|| ps_run_operations(&data) != OK)
 	{
 		ps_print_error();
 		ft_free_allocations();
 		return (EXIT_FAILURE);
 	}
 	if (!ps_is_sorted(&data))
-		return (EXIT_FAILURE); // TODO: Write
-		// ps_sort(&data);
-	// ps_print_operations(&data);
+	{
+		ft_putendl_fd("KO", STDOUT_FILENO);
+		ft_free_allocations();
+		return (EXIT_FAILURE);
+	}
+	ft_putendl_fd("OK", STDOUT_FILENO);
 	ft_free_allocations();
 	return (EXIT_SUCCESS);
 }
